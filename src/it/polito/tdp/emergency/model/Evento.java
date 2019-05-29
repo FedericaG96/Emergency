@@ -17,11 +17,14 @@ public class Evento implements Comparable<Evento>{
 		VISITA, // paziente viene visitato da medico
 		CURATO, // paziente esce da studio medico
 		TIMEOUT, // attesa troppo lunga
+		
+		POLLING, // evento periodico per verificare se ci sono studi liberi e pazienti in attesa
+				// evento che serve per la simulazione
 	}
 	
 	private LocalTime ora ; // timestamp dell'evento
 	private TipoEvento tipo ; // tipologia
-	private Paziente paziente ; // chi è il paziente coinvolto nell'evento
+	private Paziente paziente ; // chi e' il paziente coinvolto nell'evento
 	
 	public Evento(LocalTime ora, TipoEvento tipo, Paziente paziente) {
 		super();
